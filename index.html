@@ -1,516 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Developer Portfolio Contact</title>
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+        <title>Ayodipupo Oke || Fullstack Developer || IT Specialist || Application Support</title>
 
-<style>
-/* --- Portfolio Design Tokens --- */
-:root {
-  --bg: #0a0f1c;
-  --card: #121b2f;
-  --accent: orangered;
-  --text: #ffffff;
-  --muted: #9ca3af;
-  
-  /* Additional Premium Variables */
-  --accent-glow: rgba(255, 69, 0, 0.35);
-  --glass-border: rgba(255, 255, 255, 0.05);
-}
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./nav.css">
+        <link rel="stylesheet" href="./hero.css">
+        <link rel="stylesheet" href="./about.css">
+        <link rel="stylesheet" href="./project.css">
+        <link rel="stylesheet" href="./contact.css">
+        <link rel="stylesheet" href="./general-style.css">
+       
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  background-color: var(--bg);
-  /* Immersive Deep Tech Mesh Background */
-  background-image: 
-    radial-gradient(circle at 0% 0%, rgba(255, 69, 0, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(18, 27, 47, 0.9) 0%, transparent 60%),
-    linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text);
-  overflow-x: hidden;
-  padding: 40px 20px;
-}
+        </head>
+            <body>
 
-.contact-section {
-  width: min(1200px, 100%);
-  position: relative;
-}
+        <!-- Navigation -->
+            <nav>
+                <div class="logo">
+                    &lt;Dev Solomon /&gt;
+                </div>
+                <button class="hamburger" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li> 
+                    
+                <div class="repo">
+                    <a href="https://github.com/haywee39"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ayodipupo-oke-8b2346118/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                </ul>
 
-.title {
-  font-size: 3rem;
-  margin-bottom: 50px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, var(--text) 30%, var(--muted));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+            
+            </nav>
 
-/* 3D Perspective Workspace Enclosure */
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  perspective: 1500px;
-  position: relative;
-  gap: 0;
-  width: 100%;
-}
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+<section id="home">
+                    <div class="ghost">AYODIPUPO</div>
 
-/* --- Interactive 3D Card Module --- */
-.card {
-  flex: 0 0 380px;
-  min-height: 460px;
-  position: relative;
-  z-index: 10;
-  border-radius: 24px;
-  overflow: hidden;
-  background: var(--card);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
-}
+                    <section class="hero">
 
-/* Premium Light Reflection Flare */
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 60%);
-  pointer-events: none;
-}
+                        <div class="content">
 
-/* Cinematic 3D Rotational Shift when Active */
-.card.active {
-  transform: rotateY(18deg) translateZ(20px);
-  box-shadow: -20px 40px 80px rgba(0, 0, 0, 0.6), 10px 0 30px rgba(255, 69, 0, 0.1);
-  border-right: 1px solid rgba(255, 69, 0, 0.3);
-}
+                            <div class="project-tag" id="tag">
+                                01 // Online Food Restaurant
+                            </div>
 
-.card-content {
-  padding: 45px 35px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 460px;
-}
+                            <h1 class="title" id="title">
+                                Eve Afro Dishes
+                            </h1>
 
-.card h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  line-height: 1.3;
-}
+                            <p class="description" id="description">
+                                Modern responsive platform built with HTML, CSS, JavaScript and optimized for performance.
+                            </p>
 
-.card p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
+                            <div class="buttons">
+                            <a href="#" class="btn primary">Live Demo</a>
+                            <a href="#" class="btn secondary">GitHub</a>
+                            </div>
 
-/* --- Dynamic Meta Toggles --- */
-.contact-info {
-  margin-top: 35px;
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-15px) scale(0.95);
-  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
+                            <div class="stats">
 
-.card.active .contact-info {
-  max-height: 220px;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
+                                <div class="stat">
+                                    <h3>15+</h3>
+                                    <span>Projects</span>
+                                </div>
 
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: var(--text);
-  font-size: 0.95rem;
-  font-weight: 400;
-}
+                                <div class="stat">
+                                    <h3>100%</h3>
+                                    <span>Responsive</span>
+                                </div>
 
-.info-item .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: rgba(255, 69, 0, 0.1);
-  border-radius: 8px;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
+                                <div class="stat">
+                                    <h3>98%</h3>
+                                    <span>Performance</span>
+                                </div>
 
-/* --- Magnetic Action Control Button --- */
-.btn {
-  margin-top: auto;
-  align-self: flex-start;
-  padding: 15px 35px;
-  border: 1px solid rgba(255, 69, 0, 0.4);
-  border-radius: 12px;
-  background: transparent;
-  color: var(--text);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
+                            </div>
 
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  z-index: -1;
-  transform: translateY(101%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
+                        </div>
 
-/* Hover Fill Up Animations */
-.btn:hover::before {
-  transform: translateY(0);
-}
+                        <div class="visual">
+                                <!--1 Online Food Restaurant -->
+                            <div class="slide"
+                            style="background-image:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80');">
+                            </div>              
+                                
+                                <!--2 Renewable Energy  -->
+                            <div class="slide"                               
+                                style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80');">
+                            </div>                            
 
-.btn:hover {
-  box-shadow: 0 8px 25px var(--accent-glow);
-  border-color: var(--accent);
-}
+                              <!-- 3  Decorative & Industrial Paint Company -->
+                            <div class="slide"
+                                style="background-image:url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1600&q=80');">                              
+                            </div>
+                            
+                             <!-- 4 LED lighting solutions provider -->
+                            <div class="slide"
+                               style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80');">                              
+                            </div>
 
-/* Toggled State Style rules */
-.btn.toggled {
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 0 25px var(--accent-glow);
-}
-.btn.toggled::before {
-  transform: translateY(0);
-  background: #ff3300;
-}
+                            <!--5 Industrial Equipment Supplier  -->
+                            <div class="slide"
+                            style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');">
+                            </div>
 
-/* --- The Live Energy Beam Link Line --- */
-.portal-line {
-  flex: 1;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--text), transparent);
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  position: relative;
-  z-index: 1;
-}
+                            <!-- 6  Educational Institution Website -->
+                            <div class="slide"
+                            style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80');">
+                            </div>
 
-/* Moving Light Photon laser pulse overlay */
-.portal-line::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 40px;
-  height: 6px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  filter: blur(2px);
-  box-shadow: 0 0 10px #fff, 0 0 20px var(--accent);
-}
+                            <!-- Some Splash Images Links
+                            https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1600
+                            https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600
+                            https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600 -->
+                            
 
-.portal-line.active {
-  opacity: 1;
-  transform: scaleX(1);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
-}
+                            <div class="code-box">
 
-/* Laser pulse firing loop execution */
-.portal-line.active::after {
-  animation: photonPulse 1.5s infinite linear;
-}
+                                <div class="code-header">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
 
-@keyframes photonPulse {
-  0% { left: 0%; opacity: 1; }
-  80% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-}
+                                <div class="code-content">
+                                    const developer = {<br>
+                                    &nbsp;&nbsp;name: "Your Name",<br>
+                                    &nbsp;&nbsp;stack: ["HTML","CSS","JS"],<br>
+                                    &nbsp;&nbsp;responsive: true,<br>
+                                    &nbsp;&nbsp;performance: "A+"<br>
+                                    }
+                                </div>
 
-/* --- Holographic Contact Form Space --- */
-.form-box {
-  flex: 0 0 0px;
-  opacity: 0;
-  overflow: hidden;
-  transform: rotateY(-15px) translateZ(-50px) translateX(40px);
-  transform-origin: right center;
-  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.6s ease, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
+                            </div>
 
-.form-box.active {
-  flex: 0 0 580px;
-  opacity: 1;
-  transform: rotateY(-4px) translateZ(0) translateX(0);
-}
+                        </div>
 
-.form {
-  padding: 45px;
-  border-radius: 24px;
-  background: var(--card);
-  border: 1px solid var(--glass-border);
-  box-shadow: 20px 30px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05);
-}
+                    </section>
 
-.code-line {
-  font-family: 'Courier New', Courier, monospace;
-  color: var(--accent);
-  margin-bottom: 30px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  min-height: 22px;
-}
+                    <div class="counter">
+                        <span id="current">01</span> / 06
+                    </div>
 
-/* --- Alternating Stagger Transitions --- */
-.field {
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Slide up into frame */
-.field.show {
-  opacity: 1;
-  transform: translate(0) !important;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 16px 18px;
-  border: 1px solid var(--glass-border);
-  outline: none;
-  border-radius: 12px;
-  background: rgba(10, 15, 28, 0.7);
-  color: var(--text);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-glow);
-  background: rgba(10, 15, 28, 0.95);
-}
-
-textarea {
-  height: 120px;
-  resize: none;
-}
-
-.submit {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 12px;
-  background: var(--accent);
-  color: var(--text);
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px var(--accent-glow);
-  transition: all 0.3s;
-}
-
-.submit:hover {
-  box-shadow: 0 6px 22px rgba(255, 69, 0, 0.5);
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-}
-
-/* --- High Performance Mobile Adjustments --- */
-@media(max-width: 992px) {
-  .wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .card, .form-box.active {
-    flex: 0 0 auto;
-    width: 100%;
-    transform: none !important;
-  }
-  
-  .portal-line {
-    display: none !important;
-  }
-  
-  .form-box {
-    transform: translateY(40px);
-  }
-  
-  .title {
-    font-size: 2.3rem;
-    text-align: center;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<section class="contact-section">
-  <h1 class="title">Get In Touch</h1>
-
-  <div class="wrapper">
-    <div class="card" id="card">
-      <div class="card-content">
-        <h2>Let's Build Something Great</h2>
-        <p>Available for freelance contracts, full-stack application development architectures, and creative UI engineering.</p>
-        
-        <div class="contact-info">
-          <div class="info-item"><div class="icon">📞</div> +234 800 000 0000</div>
-          <div class="info-item"><div class="icon">📧</div> ayo@example.com</div>
-          <div class="info-item"><div class="icon">📍</div> Lagos, Nigeria</div>
-        </div>
-        
-        <button class="btn" id="btn">Contact Me</button>
-      </div>
-    </div>
-
-    <div class="portal-line" id="line"></div>
-
-    <div class="form-box" id="formBox">
-      <div class="form">
-        <div class="code-line" id="typing"></div>
-        
-        <div class="field" style="transform: translateX(-30px);">
-          <input type="text" placeholder="Your Name" required>
-        </div>
-        <div class="field" style="transform: translateX(30px);">
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <div class="field" style="transform: translateX(-30px);">
-          <input type="text" placeholder="Subject">
-        </div>
-        <div class="field" style="transform: translateY(20px);">
-          <textarea placeholder="Your Message" required></textarea>
-        </div>
-        <div class="field" style="transform: translateY(15px);">
-          <button class="submit">Send Message</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <div class="progress-wrap">
+                        <div class="progress" id="progress"></div>
+                    </div>
 </section>
 
-<script>
-const btn = document.getElementById("btn");
-const card = document.getElementById("card");
-const line = document.getElementById("line");
-const formBox = document.getElementById("formBox");
-const typing = document.getElementById("typing");
-const fields = document.querySelectorAll(".field");
 
-let isOpen = false;
-let typeInterval = null;
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
 
-btn.addEventListener("click", () => {
-  if (!isOpen) {
-    // --- OPEN SEQUENCE ---
-    isOpen = true;
-    btn.classList.add("toggled");
-    btn.textContent = "Close Panel";
-    card.classList.add("active");
-    
-    setTimeout(() => {
-      line.classList.add("active");
-    }, 150);
-    
-    setTimeout(() => {
-      formBox.classList.add("active");
-      startTyping();
-    }, 550);
+    <section id="about" class="about">
+        <div class="box-container1">
+               <p data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">Hello, I'm</p> <br>
+                <h1 data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">Oke <br> Ayodipupo Solomon</h1> 
+                  <br>
+                    <ul>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="400"><span class="terminal-check">></span> Computer Scientist</li>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="600"><span class="terminal-check">></span> Fullstack Web Developer</li>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="800"><span class="terminal-check">></span> IT Support Specialist</li>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1000"><span class="terminal-check">></span>Application Support</li>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1200"><span class="terminal-check">></span> Network Engineer</li>
+                        <li data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1400"><span class="terminal-check">></span> Tech Enthusiast</li>
+                    </ul>
 
-  } else {
-    // --- CLOSE/RESET SEQUENCE ---
-    isOpen = false;
-    btn.classList.remove("toggled");
-    btn.textContent = "Contact Me";
-    
-    // 1. Instantly drop fields down
-    fields.forEach(el => el.classList.remove("show"));
-    
-    // 2. Kill current typing animation if midway running
-    clearInterval(typeInterval);
-    typing.textContent = "";
-    
-    // 3. Close up structural frames
-    setTimeout(() => {
-      formBox.classList.remove("active");
-    }, 200);
-    
-    setTimeout(() => {
-      line.classList.remove("active");
-    }, 400);
-    
-    setTimeout(() => {
-      card.classList.remove("active");
-    }, 600);
-  }
-});
+                    <div class="award-highlight" data-aos="slide-right" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">
 
-function startTyping() {
-  const text = "const initialized = new ContactForm();";
-  let i = 0;
-  typing.textContent = "";
-  
-  clearInterval(typeInterval); // Guard assertion
-  
-  typeInterval = setInterval(() => {
-    typing.textContent = text.slice(0, i) + "┃";
-    i++;
-    
-    if (i > text.length) {
-      clearInterval(typeInterval);
-      typing.textContent = text; // Lock text without flashing line
+                        <div class="award-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <div class="award-text">
+                            <span class="award-label">Achievement</span>
+                            <h3>Excellent Service Award</h3>
+                            <p>2025</p>
+                        </div>
+
+                    </div>
+        </div>
+              
+        <!-- </div> -->
+        <div class="ghost">AYODIPUPO</div>
       
-      // Reveal input fields seamlessly with dynamic stagger offsets
-      fields.forEach((el, index) => {
-        setTimeout(() => {
-          if(isOpen) el.classList.add("show"); // Verify module state hasn't changed
-        }, index * 80);
-      });
-    }
-  }, 25);
-}
-</script>
+        <div class="box-container2" data-aos="slide-left" data-aos-mirror="true" data-aos-once="false" data-aos-delay="100">
+             <h1>About me</h1> 
+             <div class="line"></div>
+            <p >
+                    I transform complex ideas into reliable, 
+                    high-performance digital solutions and focuses on building systems that scale. 
+                    <br><br>
+                    My expertise spans the entire software and technology ecosystem. 
+                    Beyond development, I bring a robust background in IT support, application suport, network engineering, 
+                    and operations management—including LAN/WAN setups, hardware configurations, and ERP system management. 
+                    Driven by a passion for innovation and efficiency, 
+                    I am equipped to lead projects and deliver value across any operational model, 
+                    whether remotely as a virtual assistant, hybrid, or onsite. 
+                    <br><br>
+                    From engineering digital platforms for e-commerce and education to troubleshooting complex infrastructure 
+                    or orchestrating award-winning technical operations (Excellent Service Award, 2025), 
+                    I focus on building systems that scale. <br>
+                     My approach combines technical acumen with strong project coordination, 
+                    ensuring every deployment meets the highest standards. 
+                    You can see this dedication to quality in action through the several live projects I’ve managed 
+                    and deployed for diverse brands, showcased right below in my portfolio.
+                    <br><br>
+
+                    Beyond engineering, I apply my problem-solving skills to 
+                    paint production and live broadcast sound engineering. 
+                    I thrive on bridging the gap between abstract technical 
+                    architecture and practical, real-world results.
+
+            </p>
+
+        </div>
+    </section>
+<!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+<section id="projects" class="project">
+    <div class="project-container" >
+        <h1 data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">My Projects</h1>
+        <div class="line"></div>
+               
+                <div class="project-images">
+
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="50">
+                        <img src="./pro pic/Peterstouch Merchant logo 2.png" alt="">
+                        <div class="child">
+                            <h4>THE PETERSTOUCH MERCHANTS</h4> <br>
+                            <p>
+                                A LED technology installation company,
+                                offering PA systems installations,
+                                LED installations, and hall setup solutions.                           
+                            </p> 
+                            <br>
+                            <div class="icons">
+                                <a href="https://thepeterstouchmerchants.com" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="100">
+                        <img src="./pro pic/colour-trust-paints.jpg" alt="logo">
+                        <div class="child">
+                            <h4>COLOUR TRUST PAINTS</h4><br>
+                            <p>
+                                Premium paints & professional finishing services.
+                                From custom chemical production to professional site finishing,
+                                bringing your vision to life. <br>
+                                Colours that inspire; trust that endures.                                  
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/colourtrust2026" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="100">
+                        <img src="./pro pic/eveafro.png" alt="">
+                        <div class="child">
+                            <h4>EVE AFRO DISHES</h4><br>
+                            <p>A fast growing food restaurant in the UK 
+                                offering varieties of local 
+                                 African Nigerian dishes in the UK. 
+                                www.eveafrodishes.com                                  
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://www.eveafrodishes.com" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="300">
+                        <img src="./pro pic/2onruff.jpg" alt="">
+                        <div class="child">
+                            <h4>P-PAS SYNERGY LIMITED</h4><br>
+                            <p>A fast growing technology company 
+                                offering renewable energy
+                                through solar solutions.
+                                www.p-passynergy.com.ng                                  
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://www.p-passynergy.com.ng" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="500">
+                        <img src="./pro pic/besttech_logo.png" alt="best-tech-machines-logo">
+                        <div class="child">
+                            <h4>BEST TECH MACHINES</h4><br>
+                            <p>
+                                We provide top-grade industrial machines and 
+                                exceptional services to meet your production and business needs.                                 
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://www.besttechmachines.com" target="_blank"><i class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="700">
+                        <img src="./pro pic/LOGOrmbg.png" alt="">
+                        <div class="child">
+                            <h4>ROYAL CREST SCHOOLS</h4><br>
+                            <p>
+                                A fully established nursery and primary 
+                                 school website. 
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/royalcrestpry" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                   
+
+
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1100">
+                        <img src="./pro pic/TOPEKUPE.jpg" alt="">
+                        <div class="child">
+                            <h4>TEMITOPE OKUPE <br> WEB PORTFOLIO</h4><br>
+                            <p>A personal web portfolio showing casing 
+                               full info about Temitope Okupe 
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/tope-okupe" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                   
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1300">
+                        <img src="./pro pic/WhatsApp Image 2023-12-18 at 17.19.06.jpeg" alt="">
+                        <div class="child">
+                            <h4>VEHICLE REGISTRATION SERVICE</h4><br>
+                            <p>Vehicle documents registration 
+                                services platform 
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://jolly-vehicle-registration-servs.netlify.app" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1500">
+                        <img src="./pro pic/4squrelogo.png" alt="foursquare-church-logo">
+                        <div class="child">
+                            <h4>FOURSQUARE GOSPEL CHURCH</h4><br>
+                            <p>
+                                Opeilu DHQ
+                                Chapel of the Empowered.
+                                A website design for a church 
+                                www.foursquare-opeilu.com.ng
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/newopeilufgc/home.html" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                     <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1700">
+                        <img src="./pro pic/rollamala.jpeg" alt="">
+                        <div class="child">
+                            <h4>YETY KITCHEN</h4><br>
+                            <p>A food restaurant based in Canada 
+                                serving Nigerian local dishes
+                                and other catering services.
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/yety-project" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="1900">
+                        <img src="./pro pic/tablepentape.jpg" alt="">
+                        <div class="child">
+                            <h4>PROFILE CARD</h4><br>
+                            <p>An e-business card
+                                A profile card for individuals 
+                                with profession title 
+                                and links to social media handle
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://haywee39.github.io/my-profile-card/" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+        
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="2100">
+                        <img src="./pro pic/car.jpg" alt="">
+                        <div class="child">
+                            <h4>JADE & ANDY</h4><br>
+                            <p>Vintage Car Specialist. 
+                                An adaptation of a car service 
+                                company website design on WIX
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href="https://jadeandandy.netlify.app" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+        
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="2200">
+                        <img src="./pro pic/world globe.pexels-tatiana-syrikova-3975569.jpg" alt="">
+                        <div class="child">
+                            <h4>LANDING PAGE</h4>
+                            <p>A landing page for adventure 
+                                It has five background videos
+                                
+                                Click round circles to switch between videos 
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href=" https://haywee39.github.io/landingpage-with-video-background/" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+        
+                    <div class="parent" data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="2300">
+                        <img src="./pro pic/Screenshot (415)card.png" alt="">
+                        <div class="child">
+                            <h4>FLIP CARD</h4>
+                            <p>An e-greeting card for christmas and new year.
+                                It also a has a link for free gift
+                                Tap on card to flip to other side.
+                            </p>
+                            <br>
+                            <div class="icons">
+                                <a href=" https://haywee39.github.io/FGC-Opeilu-Seasons-Greeting/" target="_blank"><i
+                                        class="fas fa-external-link-alt fa-1x"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            <!-- </div> -->
+      
+       
+    </div>
+
+</section>
+ <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+<section id="contact" class="contact">
+    <div class="contact-container" >
+        <h1 data-aos="flip-up" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">My Contact</h1>
+        <div class="line"></div>
+
+        <!-- MAIN CONTENT OF THE CONTACT SECTION HERE  -->
+                <div class="wrapper" data-aos="slide-left" data-aos-mirror="true" data-aos-once="false" data-aos-delay="200">
+                    <div class="card" id="card">
+                        <div class="card-content">
+                            <h2>Get in Touch</h2>
+                            <p>Available for freelance contracts, full-stack application development architectures, and creative UI engineering.</p>
+                            
+                            <div class="contact-info">
+                                <div class="info-item"><div class="icon"><i class="fas fa-phone fa-1x"></i></div> +234 905 691 0840</div>
+                                <div class="info-item"><div class="icon"><i class="fas fa-envelope fa-1x"></i></div> haywee39@gmail.com</div>
+                                <div class="info-item"><div class="icon"><i class="fas fa-location fa-1x"></i></div> Lagos, Nigeria</div>
+                            </div>
+                            
+                            <button class="btn" id="btn">Contact Me</button>
+
+                        </div>
+                    </div>
+
+                    <div class="portal-line" id="line"></div>
+
+                    <div class="form-box" id="formBox">
+                        <div class="form">
+                            <div class="code-line" id="typing"></div>
+                            
+                            <div class="field" style="transform: translateX(-30px);">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="field" style="transform: translateX(30px);">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+
+                            <div class="field" style="transform: translateX(-30px);">
+                                <input type="text" placeholder="Subject">
+                            </div>
+
+                            <div class="field" style="transform: translateY(20px);">
+                                <textarea placeholder="Your Message" required></textarea>
+                            </div>
+
+                            <div class="field" style="transform: translateY(15px);">
+                                <button class="submit">Send Message</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+  
+    </div>
+</section>
+
+    <script src="./app.js"></script>
+     <script>
+        function toggleSwap(button) {
+            button.classList.toggle('swapped');
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1200, // Changes animation speed (in milliseconds)
+        once: true,     // Whether animation should happen only once - while scrolling down
+    });
+    </script>
+    <script src="./contact.js"></script>
 
 </body>
 </html>
