@@ -1,0 +1,223 @@
+.project{
+    /* background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat; */
+    position:relative;
+    min-height:100vh;
+    padding:10px 7%;
+    overflow:hidden;
+
+}
+
+
+.project::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10,15,28,0.92),
+            rgba(10,15,28,0.75)
+        );
+
+    z-index:0;
+}
+
+.project-container{
+    width: 100%;
+    max-width: 1400px;
+    position:relative;
+    background: var(--bg);
+    margin: 3.5rem;
+    padding: 1rem;
+  
+}
+.project-container h1{
+   color: var(--accent);
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.project-images{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3rem;
+}
+
+img{ 
+  width: 300px;
+  height: 250px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,.8);
+}
+
+.parent{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* transform: scale(0.8); */
+  /* border-radius: 30px; */
+  transition: all .5s ease-in-out;
+}
+.parent:hover{
+  transform: scale(0.9);
+  transition: all .5s ease-in-out;
+  border-radius: 30px; 
+  border:1px solid rgba(255,255,255,.8);
+}
+
+.parent:hover .child{
+  visibility: visible;
+  opacity: 1;
+  color: var(--text);
+  /* transform: scale(0.8);  */
+  transition: all .5s ease-in-out;
+}
+
+.child{
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  /* width: 100%; */
+  height: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--accent) 25%, orange 100%); 
+  opacity: 0;
+  color: white;
+}
+
+.child a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/* ==========================================================================
+   Media Queries for Responsiveness
+   ========================================================================== */
+
+/* Tablets & Small Laptops */
+/* @media (max-width: 1024px) {
+  .project-images {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+  }
+} */
+
+/* MEDIA QUERIES  */
+/* @media (max-width: 768px){
+    #projects{
+        padding: 0;
+        margin: 0;
+    }
+    .project{
+        display: flex;
+        flex-direction: column; 
+        width: 100vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+         padding: 0;
+        margin: 0;
+          
+    }
+
+    .project-container{
+       width: 100vw;
+        margin: 40px;
+        padding: 20px;
+        padding-top: 0;
+        margin-top: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+    }
+
+
+  .project-images{
+  display:grid;
+  width: 100vw;
+  gap: 0;
+  grid-template-columns: repeat(auto, 100%);
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background: red;
+}
+  img {
+    width: 220px;
+  height: 250px;
+  border-radius: 30px;
+  border: none;
+  }
+} */
+
+/* ================= TABLET ================= */
+
+@media screen and (max-width:768px){
+
+  #projects{
+    padding:2rem 1rem;
+  }
+
+  .project{
+    padding:5rem 4%;
+  }
+
+  .project-container{
+    width:100%;
+    margin:0;
+    padding:0;
+  }
+
+  .project-images{
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+  }
+
+  img{
+    width:100%;
+    height:200px;
+  }
+
+  /* .line{
+    width:35%;
+  } */
+
+  .child{
+    font-size: 10px;
+    padding: 10px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width:480px){
+
+  .project-images{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+  }
+
+  /* .line{ */
+    /* width:50%; */
+  /* } */
+
+  /* .child{
+    padding:1rem;
+  } */
+
+}

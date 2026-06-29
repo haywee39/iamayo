@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700;900&display=swap');
+
+.contact{
+    /* background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600'); */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    min-height:100vh;
+    padding:10px 7%;
+    overflow:hidden;
+
+
+  background-color: var(--bg);
+  /* Immersive Deep Tech Mesh Background */
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(255, 69, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(18, 27, 47, 0.9) 0%, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  overflow-x: hidden;
+
+}
+
+
+.contact::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10,15,28,0.92),
+            rgba(10,15,28,0.75)
+        );
+
+    z-index:0;
+}
+
+.contact-container{
+    width: 100%;
+    max-width: 1400px;
+    position:relative;
+    background: var(--bg);
+    margin: 3.5rem;
+    padding: 1rem;
+  
+}
+.contact-container h1{
+   color: var(--accent);
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+
+/* STYLING FOR THE CONTENT OF THE CONTACT PAGE  */
+/* body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg);
+  Immersive Deep Tech Mesh Background
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(255, 69, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(18, 27, 47, 0.9) 0%, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  overflow-x: hidden;
+  padding: 40px 20px;
+} */
+
+
+/* 3D Perspective Workspace Enclosure */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  perspective: 1500px;
+  position: relative;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* --- Interactive 3D Card Module --- */
+.card {
+  /* flex: 0 0 380px; */
+  flex: 0 0 410px;
+  min-height: 460px;
+  position: relative;
+  z-index: 10;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+}
+
+/* Premium Light Reflection Flare */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 60%);
+  pointer-events: none;
+}
+
+/* Cinematic 3D Rotational Shift when Active */
+.card.active {
+  transform: rotateY(18deg) translateZ(20px);
+  box-shadow: -20px 40px 80px rgba(0, 0, 0, 0.6), 10px 0 30px rgba(255, 69, 0, 0.1);
+  border-right: 1px solid rgba(255, 69, 0, 0.3);
+}
+
+.card-content {
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 460px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* --- Dynamic Meta Toggles --- */
+.contact-info {
+  margin-top: 35px;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-15px) scale(0.95);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card.active .contact-info {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.info-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 69, 0, 0.1);
+  /* background: rgb(255, 255, 255, 0.1); */
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+/* --- Magnetic Action Control Button --- */
+.btn {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+  padding: 15px 35px;
+  /* border: 1px solid rgba(255, 69, 0, 0.4); */
+  border:1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  z-index: -1;
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover Fill Up Animations */
+.btn:hover::before {
+  transform: translateY(0);
+}
+
+.btn:hover {
+  box-shadow: 0 8px 25px var(--accent-glow);
+  border-color: var(--accent);
+  color: #000;
+}
+
+/* Toggled State Style rules */
+.btn.toggled {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+.btn.toggled::before {
+  transform: translateY(0);
+  background: #ff3300;
+}
+
+/* --- The Live Energy Beam Link Line --- */
+.portal-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--text), transparent);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Moving Light Photon laser pulse overlay */
+.portal-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  filter: blur(2px);
+  box-shadow: 0 0 10px #fff, 0 0 20px var(--accent);
+}
+
+.portal-line.active {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+}
+
+/* Laser pulse firing loop execution */
+.portal-line.active::after {
+  animation: photonPulse 1.5s infinite linear;
+}
+
+@keyframes photonPulse {
+  0% { left: 0%; opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* --- Holographic Contact Form Space --- */
+.form-box {
+  flex: 0 0 0px;
+  opacity: 0;
+  overflow: hidden;
+  transform: rotateY(-15px) translateZ(-50px) translateX(40px);
+  transform-origin: right center;
+  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.6s ease, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-box.active {
+  flex: 0 0 580px;
+  opacity: 1;
+  transform: rotateY(-4px) translateZ(0) translateX(0);
+}
+
+.form {
+  padding: 45px;
+  border-radius: 24px;
+  background: var(--card);
+  /* background: var(--bg); */
+  border: 1px solid var(--glass-border);
+  box-shadow: 20px 30px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.code-line {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--accent);
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  min-height: 22px;
+}
+
+/* --- Alternating Stagger Transitions --- */
+.field {
+    
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Slide up into frame */
+.field.show {
+  opacity: 1;
+  transform: translate(0) !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--glass-border);
+  outline: none;
+  border-radius: 12px;
+  background: rgba(10, 15, 28, 0.7);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+  background: rgba(10, 15, 28, 0.95);
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submit {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  box-shadow: 0 6px 22px rgba(255, 69, 0, 0.5);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* --- High Performance Mobile Adjustments --- */
+@media(max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .card, .form-box.active {
+    flex: 0 0 auto;
+    width: 85vw;
+    transform: none !important;
+  }
+
+  .card-content, .form {
+  padding: 35px 25px;
+ 
+}
+  
+  .portal-line {
+    display: none !important;
+  }
+  
+  .form-box {
+    transform: translateY(40px);
+  }
+  
+
+}

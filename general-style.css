@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700;900&display=swap');
+
+
+:root{
+--bg:#0a0f1c;
+--card:#121b2f;
+--accent:orangered;
+--text:#ffffff;
+--muted:#9ca3af;
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+#about, #skills, #projects, #contact{
+  font-family:'Inter',sans-serif;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items:center;
+  padding: 4rem;
+  border-top: 1px solid rgba(248, 245, 245, 0.1);
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.line{
+    width: 20%;
+    height: .5px;
+    font-weight: lighter;
+    border-bottom:1px solid rgba(255,255,255,.4);
+    margin-bottom: 25px;
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
